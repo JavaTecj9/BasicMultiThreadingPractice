@@ -1,13 +1,18 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        ChildTask childthread1 = new ChildTask();
+        //Starting thread from a class that extends Thread class:
+        ChildTask childthread1 = new ChildTask("Thread A");
         childthread1.start();
 
-        for(int i=0; i < 1000; i++) {
-            System.out.println("Main Thread");
+        ChildTask childthread2 = new ChildTask("Thread B");
+        childthread2.start();
+
+        ChildTask childthread3 = new ChildTask("Thread C");
+        childthread3.start();
         }
 
 
+
     }
-}
+
